@@ -10,14 +10,14 @@ public class Login {
 		this.password = pass;
 	}
 	public String validate(){
-		String output=null;
-		Main main = new Main();
+		String output="";
+		DatabaseDetails main = new DatabaseDetails();
 		String database_url = main.Databaseurl();
 		String database_username = main.Databaseusername();
 		String database_password = main.Databasepassword();
 		Databaseconnection db_connection = new Databaseconnection(database_username,database_password,database_url);
 		java.sql.Connection connection = db_connection.Access_Database();
-		Statement stmnt = null;
+		Statement stmnt;
 		String query = "SELECT * FROM register WHERE email_id=\""+user_name+"\" && password=\""+password+"\"";
 		try {
 			stmnt = connection.createStatement();
