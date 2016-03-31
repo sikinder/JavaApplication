@@ -2,11 +2,9 @@ package com.netenrich;
 import java.util.*;
 import java.sql.*;
 public class Main {
-	private String database_url = "jdbc:mysql://databaseinstance.csganqaov5mj.us-east-1.rds.amazonaws.com:3306/register";
-	private String database_username = "root";
-	private String database_password = "zxcv12345";
+	private static Scanner input;
 	public static void main(String args[]) throws SQLException{
-		Scanner input = new Scanner(System.in);
+		input = new Scanner(System.in);
 		System.out.println("1.Register");
 		System.out.println("2.Login");
 		System.out.println("Enter A Number Corresponding To Your Option:");
@@ -36,15 +34,5 @@ public class Main {
 		else{
 			System.out.println("No Choice found.");
 		}
-	}
-	public String Databaseurl(){
-		return database_url;
-		
-	}
-	public String Databaseusername(){
-		return database_username;
-	}
-	public String Databasepassword(){
-		return database_password;
 	}
 }
