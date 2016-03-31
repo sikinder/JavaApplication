@@ -1,1 +1,4 @@
-Main-Class: com.netenrich.Main
+Manifest-Version: 1.0
+Rsrc-Class-Path: ./ mysql-connector-java-5.1.38-bin.jar junit-4.10.jar
+Class-Path: .
+Rsrc-Main-Class: com.netenrich.Main
