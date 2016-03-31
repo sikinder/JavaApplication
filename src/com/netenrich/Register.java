@@ -13,14 +13,14 @@ public class Register {
 		
 	}
 	public String InsertDetails(){
-		String output=null;
-		Main main = new Main();
+		String output="";
+		DatabaseDetails main = new DatabaseDetails();
 		String database_url = main.Databaseurl();
 		String database_username = main.Databaseusername();
 		String database_password = main.Databasepassword();
 		Databaseconnection db_connection = new Databaseconnection(database_username,database_password,database_url);
 		java.sql.Connection connection = db_connection.Access_Database();
-		Statement stmnt1 = null;
+		Statement stmnt1;
 		try {
 			String stmnt = "INSERT INTO register (first_name,last_name,email_id,password) VALUES (?,?,?,?)";
 			PreparedStatement ps = connection.prepareStatement(stmnt);
