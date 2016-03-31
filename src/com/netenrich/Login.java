@@ -17,10 +17,9 @@ public class Login {
 		String database_password = main.Databasepassword();
 		Databaseconnection db_connection = new Databaseconnection(database_username,database_password,database_url);
 		java.sql.Connection connection = db_connection.Access_Database();
-		Statement stmnt;
 		String query = "SELECT * FROM register WHERE email_id=\""+user_name+"\" && password=\""+password+"\"";
 		try {
-			stmnt = connection.createStatement();
+			Statement stmnt = connection.createStatement();
 			ResultSet rs = stmnt.executeQuery(query);
 			int count=0;
 			while (rs.next()){
@@ -32,9 +31,9 @@ public class Login {
 			else{
 				output = "Login Failed.";
 			}
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			
+			e.printStackTrace();
 		}
 		return output;
 	}
