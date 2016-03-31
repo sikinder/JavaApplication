@@ -50,7 +50,7 @@ public class Register {
 			else{
 				output= "Email ID is Already Registered.";
 			}
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 		}
 	return output;
