@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="jar">
+<project default="jarcreation">
     <target name="clean">
         <delete dir="./build/classes"/>
         <delete dir="./build"/>
@@ -9,7 +9,7 @@
         <mkdir dir="./build/classes"/>
         <javac includeantruntime="true" srcdir="./src/com/netenrich" destdir="./build/classes"/>
     </target>
-    <target name="jar" depends="compile">
+    <target name="jarcreation" depends="compile">
         <mkdir dir="./build/jar"/>
         <jar destfile="./Main.jar" basedir="./build/classes">
         <zipgroupfileset dir="./lib" includes="*.jar"/>
