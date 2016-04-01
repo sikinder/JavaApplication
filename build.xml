@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="java-junit-template-project" default="Jar" basedir=".">
+<project name="java-junit-template-project" default="run" basedir=".">
   <property name="main.build.dir" value="build/main" />
   <property name="main.src.dir" value="src" />
   <property name="test.build.dir" value="build/test" />
@@ -12,13 +12,13 @@
   <path id="classpath.test">
     <pathelement location="lib/junit-4.10.jar" />
     <pathelement location="lib/hamcrest-core-1.3.jar" />
-    <pathelement location="${main.build.dir}"/>
+    <pathelement location="build/jar/Project.jar"/>
     <pathelement location="lib/mysql-connector-java-5.1.38-bin.jar"/>
     <path refid="classpath.base" />
   </path>
 
   <target name="test" depends="clean, run" />
-  <target name="Jar" depends="test">
+  <target name="Jar" depends="compile">
         <mkdir dir="./build/jar"/>
         <jar destfile="./build/jar/Project.jar" basedir="${main.build.dir}">
         <zipgroupfileset dir="./lib" includes="*.jar"/>
@@ -28,14 +28,14 @@
         </jar>
     </target>
 
-  <target name="compile">
+  <target name="compile" depends="clean">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
       <classpath refid="classpath.base"/>
     </javac>
   </target>
 
-  <target name="build" depends="compile">
+  <target name="build" depends="Jar">
     <mkdir dir="${test.build.dir}"/>
     <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
         <classpath refid="classpath.test"/>
@@ -64,6 +64,7 @@
     <delete>
         <fileset dir="${basedir}" includes="**/*.class" />
     </delete>
+    <delete dir="./build"/>
     <echo message="clean done" />
   </target>
 </project>
