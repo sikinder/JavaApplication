@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar">
+    <target name="clean">
+        <delete dir="./build/classes"/>
+        <delete dir="./build"/>
+    </target>
+    <target name="compile" depends="clean">
+        <mkdir dir="./build"/>
+        <mkdir dir="./build/classes"/>
+        <javac includeantruntime="true" srcdir="./src/com/netenrich" destdir="./build/classes"/>
+    </target>
+    <target name="jar" depends="compile">
+        <mkdir dir="./build/jar"/>
+        <jar destfile="./Main.jar" basedir="./build/classes">
+        <zipgroupfileset dir="./lib" includes="*.jar"/>
+            <manifest>
+                <attribute name="Main-Class" value="com.netenrich.Main"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
