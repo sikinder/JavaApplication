@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Rsrc-Class-Path: ./ lib/ mysql-connector-java-5.1.38-bin.jar
-Class-Path: .
-Rsrc-Main-Class: com.netenrich.Main
-Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
-
