@@ -4,7 +4,8 @@ import java.sql.*;
 public class Main {
 	private static Scanner input;
 	public static void main(String args[]) throws SQLException{
-		String ver = MyClass.class.getPackage().getImplementationVersion();
+		String ver = com.netenrich.Main.class.getPackage().getImplementationVersion();
+		System.out.println(ver);
 		input = new Scanner(System.in);
 		System.out.println("1.Register");
 		System.out.println("2.Login");
