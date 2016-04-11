@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project name="java-junit-template-project" default="run" basedir=".">
-  <property name="version" value="1.0"/>
+  <property name="version" value="2.0"/>
   <property name="main.build.dir" value="build/main" />
   <property name="main.src.dir" value="src" />
   <property name="test.build.dir" value="build/test" />
