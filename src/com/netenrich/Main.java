@@ -5,7 +5,7 @@ public class Main {
 	private static Scanner input;
 	public static void main(String args[]) throws SQLException{
 		String ver = com.netenrich.Main.class.getPackage().getImplementationVersion();
-		System.out.println(ver);
+		System.out.println("Current Version of Application: "+ver);
 		input = new Scanner(System.in);
 		System.out.println("1.Register");
 		System.out.println("2.Login");
