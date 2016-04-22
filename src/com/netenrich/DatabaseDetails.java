@@ -1,9 +1,9 @@
 package com.netenrich;
 
 public class DatabaseDetails {
-	private String database_url = "jdbc:mysql://databaseinstance.csganqaov5mj.us-east-1.rds.amazonaws.com:3306/register";
-	private String database_username = "root";
-	private String database_password = "zxcv12345";
+	private String database_url = "jdbc:mysql://r";
+	private String database_username = "";
+	private String database_password = "";
 	public String Databaseurl(){
 		return database_url;
 		
