@@ -5,8 +5,8 @@ import java.sql.*;
 public class Login {
 	private String user_name;
 	private String password;
-	public Login(String user,String pass){
-		this.user_name = user;
+	public Login(String user_name,String pass){
+		this.user_name = user_name;
 		this.password = pass;
 	}
 	public String validate(){
