@@ -16,8 +16,7 @@
     <pathelement location="lib/mysql-connector-java-5.1.38-bin.jar"/>
     <path refid="classpath.base" />
   </path>
-<--
--->
+
   <target name="test" depends="clean, run" />
   <target name="Jar" depends="compile">
         <mkdir dir="./build/jar"/>
