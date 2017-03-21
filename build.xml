@@ -65,6 +65,7 @@
     </junit>
     <delete dir="${test.src.dir}"/>
     -->
+    <echo message="Done" />
   </target>
 
   <!-- delete all class files -->
