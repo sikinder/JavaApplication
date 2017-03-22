@@ -3,7 +3,7 @@ package com.netenrich;
 public class DatabaseDetails {
 	private String database_url = "jdbc:mysql://localhost/register";
 	private String database_username = "root";
-	private String database_password = "Pass@123";
+	private String database_password = "root";
 	public String Databaseurl(){
 		return database_url;
 		
