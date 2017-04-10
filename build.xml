@@ -1,4 +1,7 @@
 <?xml version="2.0"?>
+<!--
+This is the comment made in the master branch
+-->
 <project name="java-junit-template-project" default="run" basedir=".">
   <property name="version" value="1.2.2"/>
   <property name="main.build.dir" value="build/main" />
