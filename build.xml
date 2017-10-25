@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-hello
+hello hi
 -->
 <project name="java-junit-template-project" default="run" basedir=".">
   <property name="version" value="1.2.2"/>
